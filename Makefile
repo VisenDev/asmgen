@@ -2,7 +2,7 @@ run: main
 	./main
 
 main: main.o
-	gcc main.o -o main -e _start -lc -Wl,-no_pie
+	gcc main.o -o main -e _start -lc
 
 main.o: main.asm
 	nasm main.asm -o main.o -fmachO64
